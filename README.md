@@ -8,7 +8,7 @@ FISCO-BCOS提供的 [物料包](https://github.com/FISCO-BCOS/fisco-package-buil
 # 发布FISCO-BCOS
 本文读者为已有FISCO-BCOS安装经验的同学。  
   
-1. 发布前准备
+## 1. 发布前准备
 发布包的准备，是以创世节点已顺利开启为基础的。  
 并且，发布包中不包括证书。这是考虑到证书可能是来源于第三方，因此证书需要单独准备，不在这个发布流程中。
 
@@ -17,7 +17,7 @@ FISCO-BCOS提供的 [物料包](https://github.com/FISCO-BCOS/fisco-package-buil
 
 * 创世节点已运行，系统合约已经发布到链上
 
-2. 生成安装包
+## 2. 生成安装包
 * 进入deploy目录，运行make_package.sh，参数为：FCOS-BCOS所在的路径。  
 ```bash
 cd deploy
@@ -30,7 +30,7 @@ cd deploy
   
 * 将系统合约地址更新至template目录中的`config.json`，systemproxyaddress节点
 
-3. 在新机器上准备环境
+## 3. 在新机器上准备环境
 * 安装并配置好JAVA SDK，至少是1.8版本。建议安装oracle版本的SDK，估计有些加密功能会用到orcale版本特有的类。
   
 * 拷贝已准备好的package目录到目标机器
@@ -45,7 +45,7 @@ cd package
 ./install.sh
 ```
 
-4. 安装节点
+## 4. 安装节点
 * 证书准备  
   可以使用第三方的证书，如CFCA  
   也可以使用FISCO-BCOS提供的脚本生成证书
@@ -67,7 +67,7 @@ cd template
   
 * 如果该节点需要记账，则需要在管理员电脑上设置该节点为记账节点
 
-注意：  
+## 注意：  
 A. 其他节点启动后，创世节点和其他节点也就没有区别了，可退出记账，可关闭，可删除  
 B. 记账节点中，有1/3的节点失去响应时，链会处于挂起状态。此时有个很复杂的 [上帝模式](https://github.com/FISCO-BCOS/Wiki/tree/master/FISCO%20BCOS%E4%B8%8A%E5%B8%9D%E6%A8%A1%E5%BC%8F%E8%AF%B4%E6%98%8E) 可恢复使用。
 
