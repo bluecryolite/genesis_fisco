@@ -1,3 +1,0 @@
-deploy/package/fisco-bcos filter=lfs diff=lfs merge=lfs -text
-deploy/package/libp2p.a filter=lfs diff=lfs merge=lfs -text
-deploy/package/libethcore.a filter=lfs diff=lfs merge=lfs -text
